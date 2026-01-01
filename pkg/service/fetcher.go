@@ -9,8 +9,8 @@ import (
 // resty is a library for making HTTP requests in Go. It is a wrapper around the net/http package.
 // same as axios in javascript.
 var client = resty.New().
-	SetTimeout(3 * time.Second).
-	SetRetryCount(2)
+	SetTimeout(3 * time.Second). // timeout after 3 seconds.
+	SetRetryCount(2)             // retry 2 times if the request fails.
 
 // function to call api to fetch user data, from another service.
 func FetchUser(userID string) (interface{}, error) {
