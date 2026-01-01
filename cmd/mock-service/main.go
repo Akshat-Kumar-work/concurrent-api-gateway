@@ -10,7 +10,8 @@ import (
 
 func main() {
 	r := gin.Default()
-	rand.Seed(time.Now().UnixNano())
+	// Note: rand.Seed is no longer needed in Go 1.20+
+	// The global random number generator is automatically seeded
 
 	// Mock service 1: User Service
 	r.GET("/mock/user/:id", func(c *gin.Context) {
@@ -26,7 +27,7 @@ func main() {
 
 	// Mock service 2: Order Service
 	r.GET("/mock/orders/:userId", func(c *gin.Context) {
-		time.Sleep(time.Duration(rand.Intn(150)) * time.Millisecond)
+		time.Sleep(time.Duration(rand.Intn(200)) * time.Millisecond)
 		c.JSON(200, gin.H{
 			"service": "orders",
 			"userId":  c.Param("userId"),
