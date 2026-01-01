@@ -1,7 +1,7 @@
 package main
 
 import (
-	handlers "github.com/Akshat-Kumar-work/concurrent-api-gateway/internal/api/handler"
+	handlers "github.com/Akshat-Kumar-work/concurrent-api-gateway/internal/api/handlers"
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,7 +18,11 @@ func main() {
 
 	})
 
-	router.GET("/api/aggregate", handlers.AggregateHandler)
+	router.GET("/api/aggregate/wg", handlers.AggregateHandler)
+
+	router.GET("/api/aggregate/channel", handlers.AggregateChannelHandler)
+
+	router.GET("/api/aggregate/channel-with-context-timeout", handlers.AggregateHandlerWithTimeout)
 
 	router.Run(":8080")
 }
