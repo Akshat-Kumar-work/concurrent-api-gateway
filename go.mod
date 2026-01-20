@@ -3,6 +3,8 @@ module github.com/Akshat-Kumar-work/concurrent-api-gateway
 go 1.25.4
 
 require (
+	github.com/Akshat-Kumar-work/golang-rest-api v0.0.0-20251231190755-b18719a24e9e // indirect
+	github.com/Akshat-Kumar-work/pvt_go_package v0.0.0-20260120053134-0abe3255f6da // indirect
 	github.com/bytedance/gopkg v0.1.3 // indirect
 	github.com/bytedance/sonic v1.14.2 // indirect
 	github.com/bytedance/sonic/loader v0.4.0 // indirect
@@ -16,6 +18,7 @@ require (
 	github.com/go-resty/resty/v2 v2.17.1 // indirect
 	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/goccy/go-yaml v1.19.1 // indirect
+	github.com/golang-jwt/jwt/v5 v5.3.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.3.0 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
